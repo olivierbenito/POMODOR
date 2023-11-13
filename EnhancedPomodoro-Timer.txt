@@ -1,0 +1,12 @@
+Developpeur : Doumbia Al Hassan Ahmed Junior ; Akakpo olivier
+Stack : HTML/CSS/BULMA/JS/NODE
+Date de création : 11/11/2023
+
+Principe de l'appli-Web :  c'est une appliWeb basé client , qui permet de suivre la rechnique de ^pomodoro ,d e faciliter les révisions/recherches ainsi que la gestion du temps  tout ça en unse seule page . 
+
+en intégrant un minuteur , une todoList dont les commentaires et explications peuvent être amelioré par IA 
+Une zone de prompt et de recherche comparable à chatGPT pour faire des recherche 
+
+Tout CA en une seule page .
+
+
