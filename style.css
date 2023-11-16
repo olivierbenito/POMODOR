@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
@@ -52,10 +53,9 @@ section {
   height: fit-content;
 }
 
-main {
-  padding-right: 100px;
+.timeZone {
+  background-color: red;
 }
-
 .timeZone .chronoZone {
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@ main {
   font-family: "Vpro-Black";
   font-size: 30px;
   margin-top: 60px;
-  margin-left: 30%;
+  margin-left: 18%;
   background-color: blue;
 }
 .timeZone .chronoZone img {
@@ -84,7 +84,8 @@ main {
   font-family: "Quicksand-light";
   font-size: 20px;
 }
-.timeZone .titleBox {
+
+.titleBox {
   font-family: "Vpro-Black", sans-serif;
   font-size: 30px;
   color: #FFFFFF;
@@ -96,6 +97,87 @@ main {
   min-width: 277px;
   margin-top: 5%;
   border-bottom: 5px solid white;
+}
+
+.taskZone {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: fit-content;
+}
+.taskZone .taskList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.taskZone .taskList .createTask {
+  border: 3px dashed #FFFFFF;
+  border-radius: 3px;
+  width: 473px;
+  height: 56px;
+  font-family: "Vpro-Bold", sans-serif;
+  font-size: 20px;
+  color: #FFFFFF;
+  background-color: #343333;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.taskZone .taskList .task {
+  width: 794px;
+  min-height: 78px;
+  height: fit-content;
+  font-family: "Vpro-Bold";
+  font-size: 20px;
+  color: #FFFFFF;
+  border: 3px solid #FFFFFF;
+  border-radius: 3px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.taskZone .taskList .taskContainer {
+  width: 794px;
+  min-height: 200px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input[type=checkbox] {
+  background: none;
+  height: 26px;
+  width: 26px;
+  border: 1px solid #FFFFFF;
+  border-radius: 3px;
+}
+
+input[type=checkbox] {
+  background: none;
+  -webkit-appearance: none; /* Enlever le style par défaut sur les navigateurs WebKit (Chrome, Safari, etc.) */
+  -moz-appearance: none; /* Enlever le style par défaut sur les navigateurs Mozilla (Firefox) */
+  appearance: none; /* Enlever le style par défaut sur les navigateurs qui supportent la propriété "appearance" */
+  height: 26px;
+  width: 26px;
+  border: 1px solid #FFFFFF;
+  border-radius: 3px;
+}
+
+input[type=checkbox]:checked {
+  background-color: #FFFFFF;
+}
+
+.emptyState {
+  font-size: 20px;
+  font-family: "Vpro-Bold";
+  color: #343333;
+  opacity: 0.9;
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

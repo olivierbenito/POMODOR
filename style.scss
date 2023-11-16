@@ -63,8 +63,9 @@ header{
 section{
     height: fit-content;
 }
-main{padding-right:100px}
+// main{padding-right:100px}
 .timeZone{
+    background-color:red;
     .chronoZone{
         @include centering();
         flex-direction: column;
@@ -74,7 +75,7 @@ main{padding-right:100px}
         font-family:"Vpro-Black";
         font-size:30px;
         margin-top:60px;
-        margin-left:30%;
+        margin-left:18%;
         background-color: blue;
             img{
                 width: 64px;
@@ -91,19 +92,115 @@ main{padding-right:100px}
                 font-size:20px;
             }
     }
-    .titleBox{
-        font-family: "Vpro-Black",sans-serif;
-        font-size:30px;
-        color: $text-color;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        height:50px;
-        width: fit-content;
-        min-width: 277px;
-        margin-top:5%;
-        border-bottom: 5px solid white;
-    }
+   
+}
+.titleBox{
+    font-family: "Vpro-Black",sans-serif;
+    font-size:30px;
+    color: $text-color;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height:50px;
+    width: fit-content;
+    min-width: 277px;
+    margin-top:5%;
+    border-bottom: 5px solid white;
+}
+.taskZone{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;//dans un premier temps
+    width: fit-content; //dans un premier temps
+    // background-color: green;
     
+    .taskList{
+        @include centering(); 
+        flex-direction: column;
+        align-items: center;
+
+        .createTask{
+            border:3px dashed $text-color;
+            border-radius:3px;
+            width:473px;
+            height:56px;
+            font-family:"Vpro-Bold",sans-serif;
+            font-size: 20px;
+            color: $text-color;
+            background-color: $background-CTA;
+            margin-top:50px;
+
+            cursor: pointer;
+        }
+        .task{
+            width:794px;
+            min-height: 78px;
+            height: fit-content;
+            font-family: "Vpro-Bold";
+            font-size: 20px;
+            color: $text-color;
+            border: 3px solid $text-color;
+            border-radius:3px;
+            margin-top: 20px;
+    
+            display: flex;
+            align-items: center;
+    
+            padding-left:10px;
+            padding-right:10px;
+        }
+        .taskContainer{//classe du ul contenant les taches avec les checkbox
+            // background-color: purple;
+            width:794px;
+            min-height:200px;
+            height: fit-content;
+            @include centering();
+            flex-direction: column;
+
+        }
+    }//un peu contraire à l'éthique  mais bon
+    
+}
+// .increaseBox{
+//     height:26px;
+//     width: 26px;
+//     border: 1px solid $text-color;
+//     border-radius:3px;
+//     background-color: none;
+// }
+@mixin styleCheckBox{
+    height:26px;
+    width: 26px;
+    border: 1px solid $text-color;
+    border-radius:3px;
+}
+//gestion de l'input
+
+input[type="checkbox"] {
+    background: none;
+    @include styleCheckBox();
+}
+//le même truc mais pour prendre en compte les anciens naviateur
+input[type="checkbox"] {
+    background: none;
+    -webkit-appearance: none; /* Enlever le style par défaut sur les navigateurs WebKit (Chrome, Safari, etc.) */
+    -moz-appearance: none; /* Enlever le style par défaut sur les navigateurs Mozilla (Firefox) */
+    appearance: none; /* Enlever le style par défaut sur les navigateurs qui supportent la propriété "appearance" */
+    @include styleCheckBox();
+}
+// Style personnalisé pour signifier qu'on a checké parce que les deux trucs j'ai fais en haut mlà font que le check fonctonne plus xD
+input[type="checkbox"]:checked{
+    background-color: #FFFFFF;
+}
+
+//fin de la gestion de l'input
+.emptyState{
+    font-size:20px;
+    font-family: "Vpro-Bold";
+    color:$background-CTA;
+    opacity: 0.9;
+    display: none;
+    
+    // dans le JS celui là sera desactivé ou reactivé selon qu'il y ait du contenu dans le ul ou non
 
 }
