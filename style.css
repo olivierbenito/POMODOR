@@ -1,0 +1,101 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Vpro-Bold";
+  src: url("Fonts/VisueltPro-Bold.ttf");
+}
+@font-face {
+  font-family: "Vpro-black";
+  src: url("Fonts//VisueltPro-Black.ttf");
+}
+@font-face {
+  font-family: "Quicksand-light";
+  src: url("Fonts/Quicksand_Light.otf");
+}
+body {
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #1E1E1E;
+}
+
+header {
+  height: fit-content;
+  width: 100%;
+}
+header .navbar {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+}
+header .navbar .navlinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Vpro-Bold", sans-serif;
+  font-size: 15px;
+  margin-left: 35%;
+}
+header .navbar .navlinks .links {
+  margin-left: 15px;
+}
+header .navbar .navlinks .links a {
+  color: #FFFFFF;
+}
+
+section {
+  height: fit-content;
+}
+
+main {
+  padding-right: 100px;
+}
+
+.timeZone .chronoZone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: fit-content;
+  min-width: 450px;
+  color: #FFFFFF;
+  font-family: "Vpro-Black";
+  font-size: 30px;
+  margin-top: 60px;
+  margin-left: 30%;
+  background-color: blue;
+}
+.timeZone .chronoZone img {
+  width: 64px;
+  height: 64px;
+}
+.timeZone .chronoZone .timer {
+  display: flex;
+  height: 71px;
+  width: fit-content;
+  margin-top: 20px;
+}
+.timeZone .chronoZone p {
+  font-family: "Quicksand-light";
+  font-size: 20px;
+}
+.timeZone .titleBox {
+  font-family: "Vpro-Black", sans-serif;
+  font-size: 30px;
+  color: #FFFFFF;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: fit-content;
+  min-width: 277px;
+  margin-top: 5%;
+  border-bottom: 5px solid white;
+}
+
+/*# sourceMappingURL=style.css.map */

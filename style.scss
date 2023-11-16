@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+//seting things up 
+@mixin centering{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+//the color-palette
+$background: #1E1E1E;
+$background-CTA: #343333;
+$text-color: #FFFFFF;
+$inactive-contrast: #656262;
+$break-color: #11A37F;
+$chat-color-bot: #11A37F;
+$chat-color-user: #656262;
+
+//fonts 
+@font-face {
+    font-family:"Vpro-Bold";
+    src: url("Fonts/VisueltPro-Bold.ttf");
+}
+@font-face {
+    font-family:"Vpro-black";
+    src: url("Fonts//VisueltPro-Black.ttf");
+}
+@font-face {
+    font-family:"Quicksand-light";
+    src: url("Fonts/Quicksand_Light.otf");
+}
+
+body{
+    padding-left:50px;
+    padding-right: 50px;
+    background-color: $background;}
+header{
+    height: fit-content;
+    width: 100%;
+
+   .navbar{
+    height: fit-content;
+    width:100%;
+    display: flex;
+ 
+        .navlinks{
+            @include centering();
+            font-family: "Vpro-Bold",sans-serif;
+            font-size: 15px;
+            margin-left:35%;
+
+                .links{
+                    margin-left:15px;
+                    a{ color:$text-color;}
+                }
+        }
+    }
+}
+section{
+    height: fit-content;
+}
+main{padding-right:100px}
+.timeZone{
+    .chronoZone{
+        @include centering();
+        flex-direction: column;
+        width: fit-content;
+        min-width:450px;
+        color: $text-color;
+        font-family:"Vpro-Black";
+        font-size:30px;
+        margin-top:60px;
+        margin-left:30%;
+        background-color: blue;
+            img{
+                width: 64px;
+                height: 64px;
+            }
+            .timer{
+                display: flex;
+                height: 71px;
+                width: fit-content;
+                margin-top: 20px;
+            }
+            p{
+                font-family: "Quicksand-light";
+                font-size:20px;
+            }
+    }
+    .titleBox{
+        font-family: "Vpro-Black",sans-serif;
+        font-size:30px;
+        color: $text-color;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        height:50px;
+        width: fit-content;
+        min-width: 277px;
+        margin-top:5%;
+        border-bottom: 5px solid white;
+    }
+    
+
+}
